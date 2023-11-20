@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" placeholder="id를 입력 해주세요">
+        <input type="text" value="id" maxlength="7" required>
+        <!-- value속성 : 기본값 -->
+        <!-- placeholder속성 : 입력하면 사라지는 보여지는 문자 -->
+        <!-- required : 반드시 입력해야하는 값-->
+        <!-- maxlength속성 : 최대글자수 지정 -->
+
+        <br>
+        <input type="password" name="" id="">
+        <!-- input:password태그 : 입력값을 자동으로 가려준다 -->
+
+        <br>
+        <select name="" id="">
+            <option value="">선택</option>
+            <option value="soccer">축구</option>
+            <option value="baseball">야구</option>
+        </select>
+
+        <br>
+        <label for="name">이름</label>
+        <input type="text" id="name">
+        <!-- label의 for속성 과 input의 id속성을 일치시켜서 텍스트와 폼을 연결 가능 -->
+
+        <fieldset>
+            <legend>로그인</legend>
+            이름 <input type="text"> <br>
+            아이디 <input type="text"> <br>
+            비밀번호 <input type="password" name="" id="">
+        </fieldset>
+
+
+    </form>
+</body>
+</html>
