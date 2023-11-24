@@ -15,3 +15,7 @@
   ![image](https://github.com/minnjeee/SWCamp/assets/125025921/1dbe08e2-fb44-4968-866b-2fd06cddc0c9)
 - 클릭 버튼 위에 마우스를 올리면
   ![image](https://github.com/minnjeee/SWCamp/assets/125025921/5d7f907b-a0a3-4e28-830c-589685338f3d)
+## ex06폰트
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/54ab02fc-d5a9-41c0-9d44-843c33717192)
+## ex07텍스트
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/2e088e54-d733-45aa-bee2-771e68d67e84)
