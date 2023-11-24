@@ -1,0 +1,61 @@
+.box{
+    width:100px;
+    height: 100px;
+    background-color: tomato;
+    border-radius: 10px;
+    /* border-radius : 모서리 둥근정도 (px, %로 반지름 설정)  */
+    /* 차이점은 px는 그 만큼의 반지름을 가지고 둥글게, %는 전체의 그 만큼의 반지름으로 둥글게 */
+    /* 하나만 입력 : 네 모서리 모두 
+      두개 입력 : 왼쪽 위 - 오른쪽 아래 는 첫번째, 오른쪽 위 - 왼쪽 아래는 두번째 
+      세개 입력 : 왼쪽 위는 첫번째, 오른쪽 위 - 왼쪽 아래는 두번째, 오른쪽 아래는 세번째 
+      네개 입력 : 왼쪽 위부터 시계방향으로(왼쪽위->오른쪽위->오른쪽아래->왼쪽아래) */
+}
+
+div{
+    width: 70px;
+    height: 40px;
+    background-color: #9999cc;
+    /* rgb값 또는 색상코드(rgb값을 16진수로 변환한 것) 로 생상 줄 수 있음 */
+    margin: 10px;
+}
+
+.solid{
+    border-style: solid; /* 단선 */
+}
+.double{
+    border-style: double; /* 이중선 (border두께는 동일) */
+}
+.dotted{
+    border-style: dotted; /* 점선 */
+}
+.dashed{
+    border-style: dashed; /* 파선 */
+}
+.groove{
+    border-width: 10px;
+    border-style: groove; /* 테두리가 파인 모양 */
+}
+.ridge{
+    border-width: 10px;
+    border-style: ridge; /* 테두리가 튀어나온 모양 */
+}
+.inset{
+    border-width: 10px;
+    border-style: inset; /* contents까지 파인 모양 */
+}
+.outset{
+    border-width: 10px;
+    border-style: outset; /* contents까지 튀어나온 모양 */
+}
+
+.underline{
+    background-color: skyblue;
+    text-align: center;
+    line-height: 40px;
+    /* contents높이만큼 line-height를 설정하면 내용이 위아래 가운데정렬 */
+    border-bottom-style: double;
+    border-left-style: dashed;
+    border-right-style: dotted;
+    border-top-style: inset;
+    border-top-width: 5px;
+}

@@ -1,0 +1,53 @@
+body{
+    margin: 50px;
+    /* position: relative; */
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    opacity: 0.8;
+    /* opacity : 투명도, 0~1사이의 실수값  -> 글씨도 함께 투명해짐*/
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* rgba값으로 배경색 설정 시, 마지막값은 투명도 -> 배경만 투명해짐 */
+}
+
+.static{
+    position: static;
+    background-color: red;
+}
+.fixed{
+    position: fixed;
+    background-color: blue;
+    top: 120px;
+    left: 120px;
+    /* 원래있던 자리가 사라짐 */
+    /* 절대좌표로 움직임, 다른 요소에게 영향을 안 줌 */
+    /* 화면 스크롤해도 화면의 동일한 자리에 있음 */
+}
+.sticky{
+    position: sticky;
+    background-color: aqua;
+    top: 120px;
+    /* 원래있던 자리가 사라지진 않음 */
+    /* top: 70px 로 설정하면, 원래 자리에서 스크롤할 때 top을 70으로 유지하여
+    스크롤 시 top이 70px인 부분이 화면 맨 위인 것처럼 됨 */
+}
+.absolute{
+    position: absolute;
+    background-color: yellow;
+    top: 120px;
+    left: 150px;
+    /* 절대좌표로 움직임 - 화면 왼쪽 위를 기준으로 top에서 70px, left에서 90px인 자리 */
+}
+.relative{
+    position:relative;
+    background-color: chartreuse;
+    top: 30px;
+    left: 30px;
+    /* 원래 있던 좌표에서 움직임 - 있던 자리 기준으로 top에서 30px, left에서 30px인 자리 */
+}
+
+
+
+
