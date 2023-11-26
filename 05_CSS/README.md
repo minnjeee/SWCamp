@@ -1,4 +1,4 @@
-# CSS 수업 코드 결과
+# ⭐ CSS 수업 코드 결과
 ## ex01인라인스타일
 ![image](https://github.com/minnjeee/SWCamp/assets/125025921/db702b51-68d6-4fb6-b603-8d1f07d5cd04)
 ## ex02선택자
