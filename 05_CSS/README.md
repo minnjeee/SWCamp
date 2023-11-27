@@ -29,3 +29,17 @@
 ![image](https://github.com/minnjeee/SWCamp/assets/125025921/1c3f2439-baeb-488a-a69a-0d8a0af25a77)
 - style부분 속성 원하는 거 주석처리 없애고, 속성 안하고 싶은 거 주석처리 하면서 확인하기
 - 위의 사진 예시는 background-repeat속성과 background-cover속성 들어간 예시
+## ex11오버플로우
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/095b8cc3-c4bc-4376-a3e8-0b26ddedfe1f)
+## ex12플렉스
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/496ea97f-8ad0-47fb-8a21-01638853e6ad)
+## ex13그리드
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/09200aa0-a485-45aa-8587-706ba34863ed)
+
+---
+## prac02선택자실습_box
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/5460c743-a09e-4956-be4b-5a5ecbb7d1a8)
+## prac12플렉스실습_과녁
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/2cb69ba4-9686-4530-899b-aabe46e98ee2)
+## prac13그리드실습_레이아웃
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/f78f2685-2655-44f3-a471-80bb6fd3370c)
