@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    width: 500px;
+    height: 500px;
+}
+
+header{
+    height: 10%;
+    /* 부모의 높이의 10% */
+    background-color: #ea4335;
+}
+
+nav{
+    height: 10%;
+    background-color: #ff5e00;
+}
+
+.main{
+    height: 60%;
+    display:grid;
+    grid-template-columns: 30% 70%;
+}
+.side{
+    background-color: #4285f4;
+}
+.section{
+    display: grid;
+    /* grid-template-rows: 50% 50%; */
+}
+.item1{
+    background-color: #34a853;
+}
+.item2{
+    background-color: #fbbc05;
+}
+
+footer{
+    height: 20%;
+    background-color: #8a8d92;
+}
+
+
+/* 선생님 코드 */
+/* body {
+    margin:0;
+}
+
+
+.wrapper {
+    width : 500px;
+    height : 500px;
+}
+
+
+header {
+    height : 10%;
+    background-color: #ea4335;
+
+
+}
+
+
+nav {
+    height : 10%;
+    background-color:#FF5e00;
+ 
+}
+
+
+.side {
+    width : 30%;
+    height : 60%;
+    background-color: #4285f4;
+    float:left;
+}
+
+
+.section {
+    height : 30%;
+    width : 70%;
+    float:right;
+}
+
+
+.item2 {
+    background-color: #fbbc05;
+}
+
+
+.item1 {
+    background-color: #34a853;
+}
+
+
+footer {
+    height : 20%;
+    background-color: #8a8d92;
+    position:relative;
+    top:60%;
+} */
