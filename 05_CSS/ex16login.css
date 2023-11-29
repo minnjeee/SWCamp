@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 눈누 사이트의 mbc1961 폰트 - 웹폰트로 사용 복사 붙여넣기 */
+* {
+    box-sizing: border-box;
+    font-family: 'MBC1961GulimM';
+}
+
+body {
+    background-color: rgb(103, 159, 161);
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+fieldset {
+    width: 400px;
+    height: 300px;
+    border-color: black;
+    border-style: dashed;
+    font-size: 2em;
+    font-weight: 900;
+    border-radius: 30px;
+
+    background-color:lightblue;
+}
+legend {
+    text-shadow: 1px 1px white;
+}
+input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    /* border와 content 사이의 공간 확보 */
+    margin: 10px;
+    /* input요소 끼리 사이의 공간 확보 */
+
+    border-radius: 20px;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-width: 5px;
+
+    position: relative;
+    left: 13px;
+    top: 30px;
+
+    background-color:rgba(255, 255, 255, 0.6);
+}
+input::placeholder {
+    /* input의 placeholder에 접근 */
+    opacity: 0.5;
+    text-shadow: 1px 1px 0.5px black;
+}
+input:focus {
+    outline-color: aliceblue;
+    /* outline은 border와 content의 경계선 */
+}
+button {
+    width: 120px;
+    height: 50px;
+    font-size: 0.7em;
+    /* fieldset에서 2em했으므로 2em한 것에서 0.7em을 적용한 것(상대적인 단위) */
+    
+    position: relative;
+    top: 40px;
+    left: 50px;
+
+    border-radius: 30px;
+    border-style: outset;
+    border-color: aliceblue;
+    background-color: rgba(203, 234, 235, 0.8);
+}
+button:hover {
+    border-style: inset;
+}
+img {
+    clear:both;
+    
+    position: absolute;
+    top: 520px;
+    left: 300px;
+
+    border-radius: 20px;
+}
+.yeah {
+    display: grid;
+
+}
+.flower {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+.one {
+    position: relative;
+    left: 2px;
+}
+.two {
+    position : relative;
+    bottom: 10px;
+    left: 15px;
+}
+.three {
+    position: relative;
+    bottom: 10px;
+}
+.center {
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
