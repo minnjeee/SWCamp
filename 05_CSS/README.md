@@ -51,3 +51,7 @@
 ![image](https://github.com/minnjeee/SWCamp/assets/125025921/2cb69ba4-9686-4530-899b-aabe46e98ee2)
 ## prac13그리드실습_레이아웃
 ![image](https://github.com/minnjeee/SWCamp/assets/125025921/f78f2685-2655-44f3-a471-80bb6fd3370c)
+## prac14트랜지션실습_door
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/d209778d-eb90-4c10-8e2c-ecea742c9ba2)
+- 위에 마우스를 올리면 문이 열림!
+  ![image](https://github.com/minnjeee/SWCamp/assets/125025921/6e7f9e9c-2383-44f5-b9b7-7ed65e6ae455)
