@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bus fare</title>
+</head>
+<body>
+    <h1 id="notice"></h1>
+    <h1 id="notice2"></h1>
+
+    <script>
+        const notice = document.getElementById("notice");
+
+        // document.write('입력');
+        notice.innerText = "입력";
+
+        // prompt로 사용자에게서 나이를 입력
+        // 0보다 작거나 120살보다 많으면 '유효한 나이를 입력해주세요'
+        // 65세 이상이거나 7세 미만이면 버스요금은 0원
+        // 청소년(7세 이상, 20세 이하)는 720원
+        // 그 외 성인은 1200원
+        // 옴션 : 공백이거나, 숫자가 아니면 '숫자를 입력해 주세요'
+
+        let age = Number(prompt('나이를 입력하세요.'));
+        let fare;
+
+        if (isNaN(age) | age == " ") {
+           notice.innerText = '숫자를 입력해 주세요';
+        } else if ((age < 0) || (age > 120)) {
+            notice.innerText = '유효한 나이를 입력해주세요.';
+        } else {
+            if ((age >= 65) || (age <7)) {
+                fare = 0;
+            } else if ((age >= 7) && (age<=20)) {
+                fare = 720;
+            } else {
+                fare = 1200;
+            }
+            notice.innerText = `요금은 ${fare}원 입니다.`;
+        }
+
+        const notice2 = document.getElementById("notice2");
+
+        switch(true) {
+            case (age === null) :
+                notice2.innerText = "나이를 입력 해 주세요.";
+                break;
+            case (isNaN(age)) :age
+                notice2.innerText = "숫자를 입력해 주세요.";
+            case ((age < 0) || (age > 120)):
+                notice2.innerText = "유효한 나이를 입력해주세요.";
+            case ((age >= 65) || (age <7)) :
+                busFare = 0;
+            case ((age >= 7) && (age<=20)) :
+                busFare = 720;
+            default : 
+                busFare = 1200;
+        }
+        if (busFare > 0) {
+            notice2.innerText = `버스요금은 ${busFare}입니다.`
+        }
+    </script>
+</body>
+</html>
