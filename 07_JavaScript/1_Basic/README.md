@@ -44,3 +44,25 @@
 
 ### 💚💚 ex08 iteration : 반복문
 ![image](https://github.com/minnjeee/SWCamp/assets/125025921/3a3d01f5-4778-4fef-9013-ec01485ff922)
+
+## 💚 prac07 background : 배경색 바꾸기 실습
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/d52f3f5a-d457-4e6e-9ad4-5ec2f3948895)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/9b5432c5-ca3e-452d-b969-9a8f59e2efb1)
+
+## 💚 prac07 busfare : 나이 입력받고 버스요금 계산하기 실습
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/6ad9f465-b02a-4b1a-b2cd-5026af87ee2d)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/b08c7d76-e9a3-4836-94a9-4fbfe9f43e29)
+
+## 💚 prac07 자판기 : 음료와 돈을 입력받고 거스름든 계산하기 실습
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/b0c1818a-7a33-4bce-ac29-c6fc5b7498df)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/649033c7-c578-4a78-9875-cef00d40c0f7)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/74305b2b-b2b7-44a2-8f31-7a56aed83f58)
+
+## 💚 prac08 누적합 : 시작과 끝 값을 입력받고 누적합 구하기 실습
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/6e8243e6-fab1-445d-95cf-15bed9d49074)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/a204c29f-a6a3-4547-8851-075e697e99eb)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/214fbfbf-5364-4e48-ae44-0aaef4936c02)
+
+## 💚 prac08 설거지 : 접시 개수를 입력받고 개수만큼 설거지하기 실습
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/9b2ef6d2-2f94-4497-b22e-a73bd9351dbb)
+![image](https://github.com/minnjeee/SWCamp/assets/125025921/484e0cbd-10ca-4c5a-a1b1-f39788510f53)
