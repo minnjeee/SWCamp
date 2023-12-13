@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    
+    <input type="text" id="hello" placeholder="이름을 적어주세요">
+    <button onclick="clickBtn()">클릭</button>
+    <div id="text"></div>
+
+    <script>
+        // 1. input과 div를 불러오기
+        let name = document.getElementById('hello');
+        let out = document.getElementById('text');
+
+        // 2. 버튼함수 만들기 : input.value 가져와서 출력
+        function clickBtn() {
+            let inputVal = name.value;
+            out.innerText = `${inputVal}님, 어서오세요🤗`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <span id="spanTag">0</span>
+    <br>
+    <button onclick="increase()">+1 증가</button>
+ 
+   <button onclick="decrease()">-1 감소</button>
+    <script>
+        // 버튼 클릭 시, 1씩 증감 (단, 0일 경우 감소되지 않도록)
+        let num = document.getElementById('spanTag');
+        function increase() {
+            num.innerText = Number(num.innerText)+1;
+        }
+        function decrease() {
+            if (Number(num.innerText) > 0) {
+                num.innerText = Number(num.innerText)-1;
+            }
+        }
+    </script>
+</body>
+</html>

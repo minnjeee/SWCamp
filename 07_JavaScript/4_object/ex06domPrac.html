@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Practice</title>
+</head>
+<body>
+
+    <h1>클릭 한번 해볼까요?</h1>
+    <button onclick="h1Tag()">h1태그 생성</button>
+    <button onclick="aTag()">a태그 생성</button>
+    <button onclick="ulTag()">ul태그 생성</button>
+    <button onclick="origin()">원상복귀</button>
+    <div class="h1Tag"></div>
+    <div class="aTag"></div>
+    <div class="ulTag"></div>
+    <a href=""></a>
+
+    <script>
+        let h1T = document.getElementsByClassName('h1Tag')[0];
+        let aT = document.getElementsByClassName('aTag')[0];
+        let ulT = document.getElementsByClassName('ulTag')[0];
+
+        function h1Tag() {
+            h1T.innerHTML += '<h1>DOM 활용하기!</h1>';  // += 로 하면 원래 있던 HTML에 이어서 추가됨!
+        }
+        function aTag() {
+            aT.innerHTML +='<a href="http://www.google.com"><p>Google로 이동!</p></a>';
+        }
+        function ulTag() {
+            ulT.innerHTML += '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>';
+        }
+        function origin() {
+            h1T.innerHTML = '';
+            aT.innerHTML = '';
+            ulT.innerHTML = '';
+        }
+    </script>
+</body>
+</html>

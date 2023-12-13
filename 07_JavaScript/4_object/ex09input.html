@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <input type="text" id="inputTag">
+    <button onclick="click1()">클릭</button>
+    <div></div>
+    <script>
+        let input2 = document.getElementsByTagName('input')[0];
+        let d = document.getElementsByTagName('div')[0];
+        // console.log(input);
+        function click1() {
+            let inputVal = input2.value;
+            d.innerText += inputVal;
+        }
+    </script>
+</body>
+</html>
