@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <link rel="stylesheet" href="ex01style.css">
+    <script src="https://kit.fontawesome.com/fbb5039cb7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="alert">
+        <div class="welcome">
+            <P>안녕하세요, 반갑습니다. 
+                당신의 이름은 무엇인가요?</P>
+                <p class="smile"></p>
+                <input type="text" id="name">
+                <button type="submit" id="login">로그인</button>
+                <button id="enter">닫기</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-code">Lamda</i>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <button class="btn_login">LogIn</button>
+            </div>
+
+            <a href="#" class="navbar_toggle"><i class="fa-solid fa-bars"></i></a>
+        </header>
+
+        <div class="img_container">
+            <div class="img_slider">
+                <div class="img_item">
+                    <img src="bg1.jpeg" alt="">
+                </div>
+                <div class="img_item">
+                    <img src="bg2.jpg" alt="">
+                </div>
+                <div class="img_item">
+                    <img src="bg3.jpg" alt="">
+                </div>
+            </div>
+            <div class="btn">
+                <button class="btn1">1</button>
+                <button class="btn2">2</button>
+                <button class="btn3">3</button>
+            </div>
+        </div>
+        <div class="menu_container">
+            <ul class="list">
+                <li class="btn_tap">HTML</li>
+                <li class="btn_tap">CSS</li>
+                <li class="btn_tap orange">JavaScript</li>
+            </ul>
+            <div class="content">
+                <p>html이란?<br> 웹 컨텐츠의 구조를 짜고 의미를 부여하는 마크업 언어. <br>
+                    예를 들어, 페이지의 어디가 문단이고, 헤딩이고,<br>
+                    데이터 표와 외부 이미지/비디오인지 정의합니다. 
+                </p>
+            </div>
+            <div class="content">
+                <p>CSS란? <br> HTML콘텐츠에 스타일을 적용할 수 있는 스타일 규칙 언어 <br>
+                배경색을 추가하고, 글꼴을 바꾸고, 콘텐츠를 <br>
+            신문처럼 다열 레이아웃으로 배치할 수 있습니다. </p>
+            </div>
+            <div class="content show">
+                <p>JavaScirpt란? <br>
+                동적으로 콘텐츠를 바꾸고, 멀티미디어를 제어하고, 애니메이션을 
+            추가하는 등 거의 모든것을 만들 수 있는 스크립팅 언어입니다. 
+         <br>정말 모든 게 가능하지는 않겠지만, JavaScript 코드 몇 줄만으로도 놀라운 결과를 이룰 수 있습니다. </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="ex01main.js"></script>
+</body>
+</html>
