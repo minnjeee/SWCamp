@@ -1,0 +1,84 @@
+header {
+    background-color: cadetblue;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:10vh;
+}
+
+header ul {
+    display:flex;
+    
+}
+
+/* header>li : header 바로 아래에 있는 자식인 li
+   header li  : header에 속한 모든 li
+ */
+
+body {
+    margin:0;
+}
+
+.wrapper {
+    margin :0;
+}
+
+ul {
+    margin:0;
+}
+
+ header li {
+    list-style:none;
+    margin:0 20px;
+    color:white;
+    font-weight:900;
+    cursor:pointer;
+    padding:3px;
+    transition:all 0.5s;
+}
+
+header li:hover {
+    background-color: chocolate;
+    border-radius:5px;
+}
+
+.dropdown {
+    background-color:cadetblue;
+    margin:0;
+    width :200px;
+    position:relative;
+    left:20vw;
+    height:200px;
+    display:none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.show {
+    display: block;
+}
+
+/* 여기까지 메인페이지 */
+
+/* 여기부터 모달창 */
+
+.alert {
+    background-color: rgba(100,100,100,0.6);
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.show2 {
+    display:flex;
+}
+
+.box {
+    background-color: aliceblue;
+    width: 200px;
+    height:200px;
+}

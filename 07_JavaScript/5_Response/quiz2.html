@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:1rem;
+            background-color: cornflowerblue;
+        }
+        
+        .form {
+            background-color: aliceblue;
+            width : 90%;
+            height:90%;
+            padding:20px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size:1.5em;
+        }
+
+        .question, .option {
+            margin-bottom : 10px;
+        }
+        .option p {
+            margin: 5px 0;
+            font-size:0.7em;
+        }
+        input[type="button"] {
+            background-color:darkcyan;
+            color:white;
+            border:none;
+            padding: 10px 20px;
+            font-weight:900;
+            border-radius: 5px;
+            cursor: pointer;
+            transition:all 0.5s;
+        }
+
+        input[type="button"]:hover {
+            background-color:blueviolet;
+        }
+
+        .answer {
+            font-weight:bold;
+            margin-top:10px;
+        }
+        span {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>올바른 답을 선택 후 다음 버튼을 누르세요.</h1>
+    <form name="myForm" class="form">
+        <div class="question">1.UML 다이어그램 중 순차 다이어그램에 대한 설명으로 <span>틀린</span> 것은?</div>
+        <div class="option">
+            <p><input type="radio" name="answer" value="1">①객체 간의 동적 상호작용을 시간 개념을 중심으로 모델링하는 것이다.</p>
+            <p><input type="radio" name="answer" value="2">②주로 시스템의 정적 측면을 모델링하기 위해 사용한다.</p>
+            <p><input type="radio" name="answer" value="3">③일반적으로 다이어그램의 수직 방향이 시간의 흐름을 나타낸다</p>
+            <p><input type="radio" name="answer" value="4">④회귀 메시지(Self-Message), 제어블록(Statement block)등으로 구성된다.</p>
+            <!-- (p>input:radio)*4 -->
+        </div>
+        <input type="button" value="답변 제출" onclick="valid(this.form)">
+        <div class="answer"></div>
+    </form>
+
+    <script>
+        const answer = document.querySelector('.answer')
+
+        function valid(form) {
+            let count = 0;
+            for(i=0; i<form.answer.length; i++) {
+                if (form.answer[i].checked){
+                    count += 1;
+                    console.log(count);}
+            } if (count==0)
+            {alert("정답을 골라주세요!!!!!")}
+            else {
+                if (form.answer[1].checked) {
+                    answer.innerText = "정답입니다!!" 
+                } else {
+                    answer.innerText = "틀렸습니다!!" 
+                }
+            }
+        }
+      
+
+    </script>
+</body>
+</html>

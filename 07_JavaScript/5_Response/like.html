@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Like!❤️</span>
+    <span id="span">0</span>
+    <br>
+    <button>+1 증가</button>
+    <button>-1 감소</button>
+    <button>초기화</button>
+
+    <script>
+        let span = document.querySelector('#span');
+        let increse = document.querySelectorAll('button')[0];
+        let decrese = document.querySelectorAll('button')[1];
+        let reset = document.querySelectorAll('button')[2];
+
+        increse.addEventListener('click',()=>{
+            let spanNum = Number(span.innerHTML);
+            span.innerHTML = spanNum + 1;
+        })
+
+        decrese.addEventListener('click',()=>{
+            let spanNum = Number(span.innerHTML);
+            if (spanNum >0) {span.innerHTML = spanNum - 1;}
+        })
+
+        reset.addEventListener('click', ()=>{
+            let spanNum = Number(span.innerHTML);
+            span.innerHTML = 0;
+        })
+    </script>
+</body>
+</html>
+
