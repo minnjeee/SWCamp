@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin : 0;
+    font-family: 'MBC1961GulimM';
+    height:100vh;
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:5vw;
+    padding-left:5vw;
+    background-color: cadetblue;
+    transition:all 0.5s;
+}
+
+header ul {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+header li {
+    list-style: none;
+    padding: 1vw 2vw;
+}
+
+header a {
+    text-decoration: none;
+    color:white;
+}
+
+.logo {
+    color : white;
+    font-size:2em;
+    font-weight:900;
+}
+
+.login button {
+    padding:5px 10px;
+    background-color: cadetblue;
+    font-family: 'MBC1961GulimM';
+}
+
+.login button:hover {
+    background-color: chocolate;
+    cursor: pointer;
+}
+
+.navbar li {
+    transition:all 0.3s;
+}
+
+.navbar li:hover {
+    background-color: chocolate;
+    border-radius: 5px;
+}
+
+.navbar_toggle {
+    display:none;
+}
+
+img {
+    width:500px;
+    height:300px;
+    position:relative;
+    margin:0;
+}
+
+.img_container{
+    width : 500px;
+    height : 300px;
+    overflow: hidden;
+    position:absolute;
+    left:25%;
+    top:20%;
+    
+}
+
+.img_slider {
+    transition:all 0.5s;
+}
+
+.img_item {
+    margin:0;
+    
+}
+
+
+.btn {
+    position:absolute;
+    top:90%;
+    left:40%;
+    cursor: pointer;
+}
+
+.btn1, .btn2, .btn3 {
+    background-color: rgba(255,255,255,0.6);
+    border:none;
+    padding:10px;
+}
+
+/* 버튼 만들었음 */
+
+/* 여기부터 탭 만들기 */
+
+.menu_container {
+    position:absolute;
+    top:70%;
+    left:25%;
+    padding:10px;
+    border-right:5px solid lightgray;
+    border-bottom:5px solid lightgray;
+}
+
+ul.list {
+    list-style: none;
+    margin:0;
+    padding:0;
+    border-bottom:1px solid black;
+}
+
+ul.list::after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.btn_tap {
+    display:block;
+    padding:10px 20px 10px 20px;
+    float:left;
+    margin-right:-1px;
+    margin-bottom:-1px;
+    color:cadetblue;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.orange {
+    border-top:2px solid chocolate;
+    border-right:1px solid black;
+    border-bottom:1px solid white;
+    border-left:1px solid black;
+    color:chocolate;
+    margin-top:-2px;
+}
+
+.content {
+    display:none;
+    padding:10px;
+}
+
+.show {
+    display:block;
+    border-right : 1px solid black;
+    border-left:1px solid black;
+    border-bottom:2px solid chocolate;
+    height:130px;
+    width:400px;
+}
+
+/* 처음 창 */
+
+.alert {
+    background-color:rgba(100,100,100,0.6);
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    z-index:3;
+    display:none;
+  
+}
+
+.show_alert {
+    display:block;
+}
+
+
+.welcome {
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    top:50%;
+    left:40%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:10px;
+    border-radius: 10px;
+    border:2px double gray;
+}
+
+.welcome input {
+    width:200px;
+    height : 40px;
+    border-radius: 10px;
+}
+
+#login {
+    width:60px;
+    height:40px;
+    margin:10px;
+    font-weight: 900;
+}
+.welcome input:focus{
+    outline-color:aliceblue;
+}
+
+@media screen and (max-width : 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    img {
+        width:300px;
+        height : 200px;
+    }
+    .img_container {
+        width:300px;
+        height:200px;
+        top:30%;
+    }
+    .btn {
+        top:80%;
+        left:35%;
+    }
+
+    .navbar {
+        width:100%;
+    }
+    .navbar ul{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar li {
+        width : 100%;
+        text-align: center;
+    }
+
+   .login {
+    position:absolute;
+    right : 80px;
+    top : 10px
+   }
+   .navbar_toggle {
+    position:absolute;
+    right:32px;
+    top:10px;
+    font-size: 24px;
+
+   }
+   .navbar_toggle {
+    display:block;
+   }
+   .navbar ul.active {
+        display:flex;
+   }
+}
