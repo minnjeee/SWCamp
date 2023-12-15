@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기</title>
+    <style>
+       
+
+    </style>
+</head>
+<body>
+    <h1>🥤🍹🧋음료 자판기🥤🍹🧋</h1> <br>
+    <table border="2px" height="50px">
+        <tr bgcolor="pink">
+            <th width="50px">음료</th>
+            <th width="50px">가격</th>
+        </tr>
+        <tr align="center">
+            <td>솔의눈</td>
+            <td>400원</td>
+        </tr>
+        <tr align="center">
+            <td>콜라</td>
+            <td>500원</td>
+        </tr>
+        <tr align="center">
+            <td>밀키스</td>
+            <td>600원</td>
+        </tr>
+        <tr align="center">
+            <td>오렌지주스</td>
+            <td>700원</td>
+        </tr>
+    </table> <br>
+    <div id="text"></div>
+
+    <script>
+        const text = document.getElementById('text');
+        let drink = prompt('음료이름 (솔의눈, 콜라, 밀키스, 오렌지주스)');
+        let money = Number(prompt('돈'));
+        let price;
+
+        switch (drink) {
+            case '솔의눈':
+                price = 400;
+                break;
+            case '콜라':
+                price = 500;
+                break;
+            case '밀키스':
+                price = 600;
+                break;
+            case '오렌지주스':
+                price = 700;
+                break;
+            default :
+                document.write('음료를 골라주세요');
+                break;
+        }
+
+        if (price != null) {
+            if ((isNaN(money)) || (money < 0)) {
+                document.write('돈을 넣어 주세요');
+            } else if (money < price) {
+                document.write('돈이 모자랍니다');
+            } else if (money >= 5000) {
+                document.write('금액이 너무 큽니다')
+            } else {
+                text.innerText = `${drink}의 가격은 ${price}원입니다.
+                ${money}원에 대한 거스름돈은 ${money-price}원입니다.`;
+            }
+        }
+    </script>
+</body>
+</html>

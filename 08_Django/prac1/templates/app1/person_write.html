@@ -1,0 +1,19 @@
+<!-- templates/app1/person_write.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="post" action="/app1/save"> 
+		<!-- post방식으로 서버에 전송하고 전송된 정보를 받아서 /app1/save 처리 -->
+      {% csrf_token %} <!-- post방식으로 데이터 보낼 때 반드시 필요 -->
+      이름 : <input type="text" name="name"> <br>
+      전화번호 : <input type="text" name="phone"> <br>
+      <button type="submit">등록</button>
+  </form>
+</body>
+</html>

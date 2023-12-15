@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인스타일</title>
+    <style>
+        /* 주석의 모양이 다름, 단축키(ctrl + /)는 동일 */
+        h1 {
+            color:red;
+        }
+        h2 {
+            color:blue;
+        }
+        /* 내부스타일보다 인라인 스타일이 가중치가 높음 */
+        /* 따라서 h2태그의 인라인스타일(주황색) 그대로 */
+    </style>
+</head>
+<body>
+    <h1 style="color:red;">빨간색</h1>
+    <h2 style="color:orange;">주황색</h2>
+    <!-- 인라인 스타일 : 시작태그 안에 작성 -->
+    
+    <!-- 여러 개 한번에 변경이 불가능 => 내부스타일 사용하기 -->
+    <h1>빨간색</h1>
+    <h1>빨간색</h1>
+    <h1>빨간색</h1>
+</body>
+</html>

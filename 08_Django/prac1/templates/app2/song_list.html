@@ -1,0 +1,30 @@
+<!-- templates/app2/song_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Song list</h1>
+  <button><a href="/app2/songs/create/">추가</a></button>
+  <table>
+    <tr>
+      <th>제목</th>
+      <th>가수</th>
+      <th>마지막 수정일</th>
+      <th>별점</th>
+    </tr>
+    {% for song in songs %}
+      <tr>
+        <td><a href="/app2/songs/{{song.id}}/">{{song.title}}</a></td>
+        <td>{{song.singer}}</td>
+        <td>{{song.date}}</td>
+        <td>{{song.score}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

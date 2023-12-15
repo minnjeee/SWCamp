@@ -1,0 +1,21 @@
+<!-- templates/app2/song_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{song.title}}</h1>
+  <ul>
+    <li>가수 : {{song.singer}}</li>
+    <li>마지막 수정일 : {{song.date}}</li>
+    <li>별점 : {{song.score}}</li>
+  </ul>
+  <button><a href="/app2/songs/">목록</a></button>
+  <button><a href="/app2/songs/{{song.id}}/update/">수정</a></button>
+  <button><a href="/app2/songs/{{song.id}}/delete/">삭제</a></button>
+</body>
+</html>

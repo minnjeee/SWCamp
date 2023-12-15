@@ -1,0 +1,19 @@
+<!-- templates/app2/song_confirm_delete.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>삭제 확인</h1>
+  <p>{{song.title}} 노래에 대해 등록한 별점을 삭제하시겠습니까?</p>
+  <form action="{{success_url}}" method="post">
+    {% csrf_token %}
+    <button type="submit">삭제</button>
+    <button><a href="/app2/songs/{{song.id}}">취소</a></button>
+  </form>
+</body>
+</html>

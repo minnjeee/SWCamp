@@ -1,0 +1,21 @@
+<!-- templates/app2/song_update.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>노래 수정하기</h1>
+  <form method="post" action="{{success_url}}"> 
+      {% csrf_token %} 
+      <!-- 노래 제목 : <input type="text" name="title" value="{{song.title}}"> <br>
+      가수 : <input type="text" name="singer" value="{{song.singer}}"> <br>
+      별점 : <input type="text" name="score" value="{{song.score}}"> <br> -->
+      {{ form.as_p }}
+      <button type="submit">수정</button>
+  </form>
+</body>
+</html>
