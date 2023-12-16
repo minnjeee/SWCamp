@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Person list</h1>
+    <ul>
+        {% for person in dataList %}
+        <!-- 제어문은 중괄호로 표현 -->
+            <li> <a href="/person/view/{{person.id}}">{{person.name}} {{person.phone}}</a></li>
+             <!-- 변수 값은 중간괄호 2개 -->
+        {%endfor%}
+    </ul>
+
+</body>
+</html>

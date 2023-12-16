@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform"></form>
+    <h1>study list</h1>
+
+    <table>
+        
+        <!-- for score in studyList -->
+        {%for score in object_ist%}
+        <tr>
+            <td><a href="/study/view/{{score.id}}">{{score.name}}</a></td>
+            <td>{{score.kor}}</td>
+            <td>{{score.eng}}</td>
+            <td>{{score.mat}}</td>
+            <td>{{score.name}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    <button type="button" id="btnWrite">글쓰기</button>
+    </form>
+    <script>
+        // 자바스크립트로 페이지 이동
+        //document : 현재 문서
+        // document.getElementById('id 속성')
+        // document.getElementsByName('name 속성')
+        // document.getElementsByTagName('tag 이름')
+        // document.getElementsByClassName('class이름')
+        // document.querySelector('#id')
+        // document.querySelectorAll('.class')
+        let btnWrite = document.getElementById('btnWrite');
+        btnWrite.addEventListener('click', function(){
+            // 버튼을 누르면 이 함수가 호출됨
+            let frm = document.myform;
+            frm.action = '/study/write';
+        })
+    </script>
+</body>
+</html>

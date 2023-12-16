@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form태그의 중요한 속성 2가지
+    1. action : 서버로 정보를 전송하면 정손된 정보를 받아서 처리할 url
+    2. method : 서버로 정보를 전송하는 방법 (get, post) (기본값은 get)
+        - get : 비교적 간단하고 길지않은 정보를 보낼 때 사용 (header만 보냄)
+        - post : 보안을 요하고 긴 정보를 보낼 때 사용, 무한정(20~30Mbyte까지만 업로드 허용)
+            (header를 먼저 보내고 body에 데이터를 전송) -->
+    <form method="post" action="/person/save">
+        {% csrf_token %}
+        이름 : <input type="text" name="name"> <br>
+        전화번호 : <input type="text" name="phone"> <br>
+        <button type="submit">등록</button>
+    </form>
+</body>
+</html>

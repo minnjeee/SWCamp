@@ -1,0 +1,56 @@
+1. 가상 환경 실행
+cd \django_workspace
+mysitestart
+
+2. myhome1 프로젝트 생성
+mkdir myhome1
+cd myhome1
+django-admin startproject config . 
+
+config/settings.py 수정 (DB, DIR, TEMPLATES, STATICS, LOG/LOGOUT_REDIRECT_URL)
+
+3. cx_Oracle 설치
+pip install cx_Oracle
+
+4. board 앱 생성
+django-admin startapp board
+app을 config/settings.py 에 등록 (INSTALLED_APP)
+    board.apps.BoardConfig (앱이름(폴더명).파일명,클래스명)
+board/models.py 파일에 클래스 추가
+
+5. 오라클(SQLplus)에 접속해서 사용자 생성
+cmd창에서
+접속(권한 SYSDBA로 접속) - sqlplus sys/oracle as sysdba
+(계정에 ##붙이기 싫을 때 - sysdba)
+세션 변경 - ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+사용자 생성 - CREATE USER user01 IDENTIFIED BY 1234;
+사용자에게 권한 부여 - GRANT CONNECT, resource TO user01;
+계정권한문제 해결 - ALTER USER user01 DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+
+5. 모델 생성
+python manage.py makemigrations
+(migrations폴더를 삭제하거나 안 될 때, migrations하면 no changed detect 나올 때
+테이블스키마 생성 - python manage.py makemigrations board)
+테이블 생성 - python manage.py migrate
+    (databaseError발생 시, python manage.py migrate --fake-initial)
+
+테이블 확인하기 (sqlplus에서)
+conn user01/1234
+select table_name from tabs;
+desc board_board;
+
+board/urls.py 파일 생성, config/urls.py파일과 연결
+board/urls.py오ㅏ board/views.py 파일 수정
+
+6. static폴더,템플릿 생성
+templates 폴더 생성, templates 파일생성
+
+7. 테이블에 데이터 추가
+insert into board_board(id, title, writer, wdate, contents, hit) values (1, '제목1', '작성자1', sysdate, '내용1',0);
+insert into board_board(id, title, writer, wdate, contents, hit) values (2, '제목2', '작성자2', sysdate, '내용2',0);
+insert into board_board(id, title, writer, wdate, contents, hit) values (3, '제목3', '작성자3', sysdate, '내용3',0);
+commit;
+
+forms.py 파일 생성
+view.py와 urls.py 파일 수정
+board_write.html 템플릿 파일 생성

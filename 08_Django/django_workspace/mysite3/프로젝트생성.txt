@@ -1,0 +1,14 @@
+cd \django_workspace
+activate
+프롬프트 확인   (mysite) C:\django_workspace>
+
+프로젝트 폴더 생성  mkdir mysite3 
+폴더로 이동     cd mysite3
+프로젝트 생성   django-admin startproject config .
+앱 생성     django-admin startapp person
+실행    python manage.py runserver
+서버 구동   http://127.0.0.1:8000
+
+
+매핑    config/urls.py 와 person/urls.py, person/views.py 매핑
+    

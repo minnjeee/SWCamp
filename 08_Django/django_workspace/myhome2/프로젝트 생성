@@ -1,0 +1,78 @@
+1. project, app 생성
+mkdir myhome2
+cd myhome2
+django-admin startproject config .
+django-admin startapp board
+
+2. 사용자 계정 생성, 권한 부여
+sqlplus sys/oracle as sysdba
+alter session set "_ORACLE_SCRIPT" = TRUE;
+create user user02 identified by 1234;
+grant connect, resource to user02;
+alter user user02 default tablespace users quota unlimited on users;
+
+3. board/models.py 파일에서 모델 생성 
+class Board(models.Model):
+
+4. config/settings.py 파일 수정 (앱등록, templates경로설정, db변경)
+
+5. makemigrations, migrate 명령 수행
+python manage.py makemigrations board - 쿼리 생성
+python manage.py migrate - db에 테이블 생성
+
+6. board.forms.py 파일 생성
+class BoardFrom(forms.ModelForm):
+
+7. 템플릿 파일 생성, board/urls.py board/views.py, config/urls.py 연결
+
+8. 데이터 추가
+insert into board_board(id, title, writer, contents, wdate, hit) values(1, '제목1','작성자1','내용1',sysdate,0);
+...
+commit; 
+
+9. views.py 파일에 쿼리를 직접실행하는 방식 함수 작성
+10. common 폴더 생성 -> CommonUtil.py 파일 생성
+
+
+
+
+
+sqldeveloper에서 board_board테이블의 값들 새로 추가하기
+create or replace procedure insert_board
+is
+	id number;
+	title varchar2(100);
+	writer varchar2(100);
+	contents varchar2(100);
+	wdate date;
+	hit  number;
+
+begin
+  delete from board_board;
+	for i in 1..235 loop
+	  	insert into board_board(id, title, writer, contents, wdate, hit) 
+		values(i, '제목'||i, '작성자'||i, '내용'||i, sysdate, 0); 
+  end loop;
+	commit;
+end;
+/
+exec insert_board;
+
+
+common.CommonUtil.py 파일에 CommonPage 클래스 생성
+
+
+paging.html 템플릿 파일 생성
+board_list.html 템플릿 파일과  {% include "./paging.html" %} 로 연결
+
+views.py 과 urls.py 파일 수정
+
+templates(html)파일들에서 연산을 수행해야 할 때
+pip install django-mathfilters
+config/settings.py 파일의 INSTALLED_APPS 에 'mathfilters' 추가
+
+
+static 폴더 생성
+config/settings.py 파일에 path로 연결
+https://jquery.com/download/ 에서 다운로드
+board_list.html에 script 로 연결
