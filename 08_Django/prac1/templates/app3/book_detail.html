@@ -1,0 +1,21 @@
+<!-- templates/app2/book_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{book.title}}</h1>
+  <ul>
+    <li>저자 : {{book.author}}</li>
+    <li>마지막 수정일 : {{book.date}}</li>
+    <li>리뷰 : {{book.review}}</li>
+  </ul>
+  <button><a href="/app3/books/">목록</a></button>
+  <button><a href="/app3/books/{{book.id}}/update/">수정</a></button>
+  <button><a href="/app3/books/{{book.id}}/delete/">삭제</a></button>
+</body>
+</html>
