@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>��Ĺ ���� ����</title>
+</head>
+<body>
+	<h1>��Ĺ ���� �ȳ�!</h1>
+	<!-- h2+ol>li{$.����}*5 + <tab> -->
+	<h2></h2>
+	<ol>
+		<li>1.����</li>
+		<li>2.����</li>
+		<li>3.����</li>
+		<li>4.����</li>
+		<li>5.����</li>
+	</ol>
+	<!-- h2+ol>(li>a)*5 + <tab> -->
+	<h2>����������</h2>
+	<ol>
+		<li><a href="./hello.do">���������� ȣ��</a></li>
+		<li><a href="./hello.do?a=14&b=33">a(13)xb(14)=?</a></li>
+		<li>Get���
+			<form action="./hello.do" method="get">
+				<input type="text" name="a" value="33" />
+				<input type="text" name="b" value="55" />
+				<button type="submit">����</button>
+			</form>
+		</li>
+		<li>Post���
+			<form action="./hello.do" method="post">
+				<input type="text" name="a" value="33" />
+				<input type="text" name="b" value="55" />
+				<button type="submit">����</button>
+			</form>
+		</li>
+		<li><a href="./student/list.do">JDBC�� ����Ŭ�� �ִ� �л�����Ʈ ȣ��</a></li>
+		<!-- 
+		<li><a href="./hw/studentList.do">JDBC�� �л�����Ʈ ȣ�� ����</a></li>  -->
+		<li>���
+			<form action="./hw/studentList.do" method="post">
+				��ȣ : <input type="text" name="num"/><br/>
+				�̸� : <input type="text" name="name"/><br/>
+				��ȭ��ȣ : <input type="text" name="phone"/><br/>
+				�ּ� : <input type="text" name="address"/><br/>
+				������� : <input type="text" name="birthday"/><br/>
+				<button type="submit" name="button" value="insert">���</button>
+			</form>
+		</li>
+		<li>����
+			<form action="./hw/studentList.do" method="post">
+				������ �л��� �̸� : <input type="text" name="name"/><br/>
+				���� ���� �����͸� �Է��ϼ���<br/>
+				��ȣ : <input type="text" name="num"/><br/>
+				��ȭ��ȣ : <input type="text" name="phone"/><br/>
+				�ּ� : <input type="text" name="address"/><br/>
+				������� : <input type="text" name="birthday"/><br/>
+				<button type="submit" name="button" value="update">����</button>
+			</form>
+		</li>
+		<li>����
+			<form action="./hw/studentList.do" method="post">
+				������ �л��� �̸� : <input type="text" name="name"/><br/>
+				<button type="submit" name="button" value="delete">����</button>
+			</form>
+		</li>
+		<!-- ���! ����! ����! CRUD(Create Read Update Delete) -->
+	</ol>
+	<!-- h2+ol>li*2 -->
+	<h2>Get�� Post ���(method)</h2>
+	<p>�Ķ���͸� url ���ڵ����� �����ؼ� �����Ѵ�(url ���ڵ����� �Ķ���� ���� �����ϴ� ���� ��õ)</p>
+	<ol>
+		<li>
+			Get : a�±׷� �Ķ���͸� ��û�ϴ� ���
+			<ul>
+				<li>��ũ : �ٸ� ����Ʈ�� �̵� (�����ּ� http://~~)</li>
+				<li>�׺���̼� : �� ����Ʈ ������ �ٸ� ����Ʈ�� �̵� (����ּ� /, ./)</li>
+				<li>�ּ� ����</li>
+				<li>�˻� (form method='get')</li>
+				<li>**�Ķ���Ͱ� �ּ��� �Ϻδ�</li>
+				<li>�Ķ���͸� ? ���Ͽ� ������Ʈ������ �����Ѵ�. ���������� �ٸ����� ���������� �ִ�.</li>
+			</ul>
+		</li>
+		<li>
+			Post : ���(form)����� �Ķ���͸� ��û�ϴ� ���
+			<ul>
+				<li>�α���</li>
+				<li>ȸ������</li>
+				<li>����</li>
+				<li>�Խ��� ����, ����</li>
+				<li>���Ͼ��ε�</li>
+				<li>
+					form �� ����� ��ư�� ���� �� action �ۼ��� ���ҽ��� ��û
+					�Ķ���ʹ� input ��ҿ� �ۼ��� ���� ��û ���� ����� �����ؼ� ������.
+				</li>
+				<li>**�Ķ���Ͱ� �������������� ó���� ��� (url�� �Ķ���Ͱ� ���ԵǾ� ���� �ʴ�.)</li>
+				<li>��û��� ������ ������Ʈ������ �Ķ���͸� �����Ѵ�.(�Ķ������ �������� ����, Get��ĺ��� ����� ���� ������, ������ ��ȭ�ȴ�.)</li>
+			</ul>
+		</li>
+	</ol>
+	<h2>http ��Ű� status</h2>
+	<ul>
+		<li>status 100 : http�� ��������� �� �� (�޼����� �ְ� ���� ��)</li>
+		<li>status 200 : ����</li>
+		<li>status 300 : �����̷�Ʈ ���� (�������� ������ ���ҽ��� ��û)
+			����. �α����� ��û -> �α��� ó�� -> (index,login) 302
+		</li>
+		<li>status 400 : Ŭ���̾�Ʈ�� �� �� ��û���� ��
+			<ul>
+				<li>404 : �ش� path�� ���ҽ��� �������� ����</li>
+				<li>405 : get������� ��û�ؾ� �ϴµ� post�� ��û���� ��</li>
+			</ul>
+		</li>
+		<li>status 500 : �����ڰ� ����ó���� ���� ���� �� or ���� ������ ���� ��</li>
+	</ul>
+	<h2>url ������ ���ҽ�</h2>
+	<p>������ ����� ���ҽ�(������ �� �ִ� �ڷ�)�� ��û�ϴ� �� ���ȴ�.</p>
+	<p>http://naver.com/book/detail.do?bookId=123123</p>
+	<ul>
+		<li>https : ��űԾ� http(��) ����� �ϰڴ�.</li>
+		<li>naver.com : �����ּ� (������ : ip �� �����ϴ� ��)</li>
+		<li>/book/detail.do : �������� ���ҽ��� �ּ� (path)</li>
+		<li>?bookId=123123&a=10&b=20 : ������Ʈ�� �Ķ���͸� �����ϴ� ���ڿ�
+			<ul>
+				<li>�������ҽ����� ó���ؾ��� ������ ����(123123 ���̵��� å�� ã�Ƽ� detail.do�� �������)</li>
+				<li>url ���ڵ����� �Ķ���� ���� ó���Ѵ�.</li>
+				<li>���� �ʹ� �� ���� ������ �� ����.</li>
+			</ul>
+		</li>
+	</ul>
+	<h2>����, ���� ���ҽ�</h2>
+	<h3>���� ���ҽ�</h3>
+	<p>��û�ϴ� ���ҽ��� ��ȭ�� ���� �� (img, ������, html, css, js)(������(����ġ)�� ó���ϴ� ���ҽ�)</p>
+	<h3>���� ���ҽ�</h3>
+	<p>��û�ϴ� ���ҽ��� ����Ǿ� ���ϴ� �� (db����(jdbc)�ؼ� ��ȸ,����,����,����� �ϴ� ��)</p>
+	<ul>
+		<li>��Ĺ java servlet(������), jsp(JavaServletPate)(����������, ���ڿ��� �״�� �����ϴ� ��)</li>
+		<li>php, asp, </li>
+		<li>python django</li>
+		<li>node.js(v8)</li>
+	</ul>
+	
+</body>
+</html>
