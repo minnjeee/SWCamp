@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>학생 등록 폼</title>
+</head>
+<body>
+	<h1>학생 등록 양식</h1>
+	<form action="./register.do" method="post">
+	<!-- post방식 장점 : 파라미터 길이 제한x, 보안에 유리
+		등록 성공 -> 리스트
+		등록 실패 -> 등록양식
+	 -->
+		<!-- p>label>input[type=text] 치고 <tab> -->
+		<p><label>num : <input name="num" value="" type="text" /></label></p>
+		<p><label>name : <input name="name" value="" type="text" /></label></p>
+		<p><label>phone : <input name="phone" value="" type="text" /></label></p>
+		<p><label>address : <input name="address" value="" type="text" /></label></p>
+		<p><label>birthday : <input name="birthday" placeholder="yy/MM/dd" type="text" /></label></p>
+		<!-- p>button{제출} -->
+		<p><button>제출</button></p>
+	</form>
+</body>
+</html>
